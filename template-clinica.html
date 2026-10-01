@@ -1,258 +1,189 @@
-/* RESET E GERAL */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-body { background-color: #F8FAFC; color: #333; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vida Plena - Saúde e Bem-Estar</title>
+    <link rel="stylesheet" href="template-clinica.css">
+</head>
+<body>
 
-/* CABEÇALHO */
-header {
-    background-color: #FFFFFF;
-    color: #1a3a5c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.logo { font-size: 26px; font-weight: bold; letter-spacing: 1px; }
-.logo span { color: #00A99D; }
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Vida <span>Plena</span></div>
+        <nav>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#equipe">Nossa Equipe</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato" class="btn-agendar">Agendar Consulta</a>
+        </nav>
+    </header>
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-nav a {
-    color: #1a3a5c;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-nav a:hover { color: #00A99D; }
+    <!-- Hero Section -->
+    <section class="hero-clinica">
+        <div class="hero-conteudo">
+            <h1>Cuidando da sua saúde com <span>atenção e carinho</span>.</h1>
+            <p>Uma equipe multidisciplinar pronta para atender você e sua família com o que há de mais moderno na medicina.</p>
+            <a href="#contato" class="btn-principal">Agendar Consulta</a>
+            <a href="#especialidades" class="btn-secundario">Ver Especialidades</a>
+        </div>
+    </section>
 
-.btn-agendar {
-    background-color: #00A99D;
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.btn-agendar:hover { background-color: #008a80; }
+    <!-- Especialidades -->
+    <section class="especialidades" id="especialidades">
+        <h2>Nossas Especialidades</h2>
+        <p class="subtitulo">Cuidado completo para todas as fases da vida.</p>
 
-/* HERO */
-.hero-clinica {
-    background: linear-gradient(rgba(26, 58, 92, 0.85), rgba(26, 58, 92, 0.85)), url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200') center/cover;
-    color: white;
-    text-align: center;
-    padding: 140px 20px;
-}
-.hero-conteudo h1 {
-    font-size: 46px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.hero-conteudo h1 span { color: #00A99D; }
-.hero-conteudo p {
-    font-size: 18px;
-    color: #e0e8f0;
-    margin-bottom: 30px;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.btn-principal {
-    background-color: #00A99D;
-    color: white;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    transition: 0.3s;
-    margin: 0 8px;
-}
-.btn-principal:hover { background-color: #008a80; transform: scale(1.05); }
-.btn-secundario {
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    border: 2px solid white;
-    transition: 0.3s;
-    margin: 0 8px;
-}
-.btn-secundario:hover { background-color: white; color: #1a3a5c; }
+        <div class="grid-especialidades">
+            <div class="card-especialidade">
+                <div class="icone">🩺</div>
+                <h3>Clínica Geral</h3>
+                <p>Consultas de rotina, check-ups e acompanhamento preventivo.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">❤️</div>
+                <h3>Cardiologia</h3>
+                <p>Exames do coração, eletrocardiograma e acompanhamento cardíaco.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🦷</div>
+                <h3>Odontologia</h3>
+                <p>Limpeza, clareamento, ortodontia e implantes dentários.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🧠</div>
+                <h3>Psicologia</h3>
+                <p>Atendimento psicológico para adultos, crianças e casais.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">👶</div>
+                <h3>Pediatria</h3>
+                <p>Acompanhamento do crescimento e desenvolvimento infantil.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🦴</div>
+                <h3>Ortopedia</h3>
+                <p>Tratamento de lesões, dores nas costas e articulações.</p>
+            </div>
+        </div>
+    </section>
 
-/* ESPECIALIDADES */
-.especialidades { padding: 70px 50px; max-width: 1100px; margin: 0 auto; }
-.especialidades h2 { text-align: center; font-size: 36px; color: #1a3a5c; margin-bottom: 10px; }
-.subtitulo { text-align: center; color: #777; margin-bottom: 50px; font-size: 17px; }
-.grid-especialidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-.card-especialidade {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-bottom: 4px solid #1a3a5c;
-    transition: 0.3s;
-}
-.card-especialidade:hover { transform: translateY(-8px); border-bottom-color: #00A99D; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.card-especialidade .icone { font-size: 45px; margin-bottom: 15px; }
-.card-especialidade h3 { color: #1a3a5c; font-size: 20px; margin-bottom: 10px; }
-.card-especialidade p { color: #666; font-size: 14px; line-height: 1.5; }
+    <!-- Nossa Equipe -->
+    <section class="equipe" id="equipe">
+        <h2>Nossa Equipe</h2>
+        <p class="subtitulo">Profissionais qualificados e dedicados ao seu bem-estar.</p>
 
-/* EQUIPE */
-.equipe { background-color: #e8f4f3; padding: 70px 50px; }
-.equipe h2 { text-align: center; font-size: 36px; color: #1a3a5c; margin-bottom: 10px; }
-.grid-equipe {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
-}
-.membro {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-.membro:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.membro .foto {
-    font-size: 60px;
-    margin-bottom: 15px;
-    background-color: #e8f4f3;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px auto;
-}
-.membro h3 { color: #1a3a5c; font-size: 18px; margin-bottom: 5px; }
-.membro p { color: #00A99D; font-size: 14px; font-weight: bold; }
+        <div class="grid-equipe">
+            <div class="membro">
+                <div class="foto">👩‍⚕️</div>
+                <h3>Dra. Ana Silva</h3>
+                <p>Clínica Geral - CRM 12345</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👨‍⚕️</div>
+                <h3>Dr. Carlos Rocha</h3>
+                <p>Cardiologista - CRM 67890</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👩‍⚕️</div>
+                <h3>Dra. Mariana Costa</h3>
+                <p>Pediatra - CRM 11223</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👨‍⚕️</div>
+                <h3>Dr. Paulo Mendes</h3>
+                <p>Ortopedista - CRM 44556</p>
+            </div>
+        </div>
+    </section>
 
-/* SOBRE */
-.sobre-clinica { background-color: #1a3a5c; color: #e0e8f0; padding: 70px 50px; }
-.sobre-conteudo { max-width: 1000px; margin: 0 auto; }
-.sobre-clinica h2 { text-align: center; color: #00A99D; font-size: 34px; margin-bottom: 40px; }
-.diferenciais {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-}
-.diferencial {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    background-color: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #00A99D;
-}
-.diferencial span { font-size: 24px; }
-.diferencial h4 { color: white; font-size: 17px; margin-bottom: 5px; }
-.diferencial p { font-size: 14px; color: #b0c4d8; }
+    <!-- Sobre a Clínica -->
+    <section class="sobre-clinica" id="sobre">
+        <div class="sobre-conteudo">
+            <h2>Por que escolher a Vida Plena?</h2>
+            <div class="diferenciais">
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Atendimento Humanizado</h4>
+                        <p>Você é tratado como pessoa, não como número.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Tecnologia de Ponta</h4>
+                        <p>Equipamentos modernos para diagnósticos precisos.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Localização Privilegiada</h4>
+                        <p>Fácil acesso e estacionamento no local.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Convênios Aceitos</h4>
+                        <p>Trabalhamos com os principais planos de saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* CONTATO */
-.contato { padding: 70px 20px; max-width: 600px; margin: 0 auto; }
-.contato h2 { text-align: center; font-size: 34px; color: #1a3a5c; margin-bottom: 10px; }
-.form-contato { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
-.form-contato input,
-.form-contato select,
-.form-contato textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-    background-color: white;
-}
-.form-contato input:focus,
-.form-contato select:focus,
-.form-contato textarea:focus { outline: none; border-color: #00A99D; box-shadow: 0 0 0 3px rgba(0, 169, 157, 0.1); }
-.btn-enviar {
-    background-color: #00A99D;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-enviar:hover { background-color: #008a80; transform: scale(1.02); }
+    <!-- Contato / Agendamento -->
+    <section class="contato" id="contato">
+        <h2>Agende sua Consulta</h2>
+        <p class="subtitulo">Preencha o formulário e entraremos em contato para confirmar.</p>
+        <form class="form-contato" onsubmit="event.preventDefault(); alert('✅ Agendamento solicitado! Entraremos em contato para confirmar.');">
+            <input type="text" placeholder="Seu Nome Completo" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <input type="tel" placeholder="Seu Telefone / WhatsApp" required>
+            <select required>
+                <option value="">Selecione a Especialidade</option>
+                <option>Clínica Geral</option>
+                <option>Cardiologia</option>
+                <option>Odontologia</option>
+                <option>Psicologia</option>
+                <option>Pediatria</option>
+                <option>Ortopedia</option>
+            </select>
+            <input type="date" required>
+            <textarea placeholder="Descreva brevemente o motivo da consulta..." rows="4"></textarea>
+            <button type="submit" class="btn-enviar">Solicitar Agendamento</button>
+        </form>
+    </section>
 
-/* RODAPÉ */
-footer { background-color: #0f2438; color: #aaa; padding: 50px 50px 20px 50px; }
-.footer-conteudo { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
-.footer-conteudo h3 { color: #00A99D; margin-bottom: 10px; font-size: 16px; }
-.footer-conteudo p { font-size: 14px; margin-bottom: 5px; }
-.copyright { text-align: center; font-size: 12px; border-top: 1px solid #333; padding-top: 20px; }
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-conteudo">
+            <div>
+                <h3>Vida Plena</h3>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>Rua da Saúde, 500 - Savassi</p>
+                <p>Belo Horizonte / MG</p>
+            </div>
+            <div>
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 07h às 20h</p>
+                <p>Sábado: 08h às 13h</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p>(31) 3333-4444</p>
+                <p>contato@vidaplena.com.br</p>
+            </div>
+            <div>
+                <h3>Emergência</h3>
+                <p>📞 (31) 99999-0000</p>
+                <p>Disponível 24h</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Clínica Vida Plena. Todos os direitos reservados.</p>
+    </footer>
 
-/* ============================
-   RESPONSIVIDADE PARA CELULAR
-   ============================ */
-@media (max-width: 768px) {
-    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 12px; }
-    .logo { font-size: 24px; }
-    nav { flex-direction: column; width: 100%; gap: 10px; }
-    nav a { font-size: 15px; width: 100%; text-align: center; padding: 5px 0; }
-    .btn-agendar {
-        width: 100%;
-        max-width: 280px;
-        padding: 12px 20px;
-        font-size: 15px;
-        margin: 5px auto 0 auto;
-        text-align: center;
-    }
-    .hero-clinica { padding: 70px 20px; }
-    .hero-conteudo h1 { font-size: 28px; }
-    .hero-conteudo p { font-size: 15px; }
-    .btn-principal, .btn-secundario {
-        padding: 12px 25px;
-        font-size: 14px;
-        display: block;
-        margin: 10px auto;
-        max-width: 280px;
-        text-align: center;
-    }
-    .especialidades { padding: 40px 20px; }
-    .especialidades h2 { font-size: 26px; }
-    .grid-especialidades { grid-template-columns: 1fr; gap: 20px; }
-    .card-especialidade { padding: 25px 20px; }
-    .equipe { padding: 40px 20px; }
-    .equipe h2 { font-size: 26px; }
-    .grid-equipe { grid-template-columns: 1fr; gap: 20px; }
-    .sobre-clinica { padding: 40px 20px; }
-    .sobre-clinica h2 { font-size: 26px; }
-    .diferenciais { grid-template-columns: 1fr; gap: 15px; }
-    .contato { padding: 40px 20px; }
-    .contato h2 { font-size: 26px; }
-    footer { padding: 40px 20px 15px 20px; }
-    .footer-conteudo { flex-direction: column; gap: 20px; }
-}
+</body>
+</html>

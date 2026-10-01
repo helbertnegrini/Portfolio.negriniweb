@@ -14,23 +14,34 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .logo { font-size: 26px; font-weight: bold; letter-spacing: 2px; }
-.logo span { color: #E91E63; /* Rosa vibrante */ }
+.logo span { color: #E91E63; }
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-size: 15px;
     transition: 0.3s;
 }
 nav a:hover { color: #E91E63; }
+
 .btn-carrinho {
     background-color: #E91E63;
     padding: 10px 20px;
     border-radius: 50px;
     font-weight: bold;
     color: white !important;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 .btn-carrinho:hover { background-color: #c2185b; }
 
@@ -41,17 +52,9 @@ nav a:hover { color: #E91E63; }
     text-align: center;
     padding: 140px 20px;
 }
-.hero-conteudo h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
+.hero-conteudo h1 { font-size: 52px; margin-bottom: 20px; letter-spacing: 2px; }
 .hero-conteudo h1 span { color: #E91E63; }
-.hero-conteudo p {
-    font-size: 18px;
-    color: #f0f0f0;
-    margin-bottom: 30px;
-}
+.hero-conteudo p { font-size: 18px; color: #f0f0f0; margin-bottom: 30px; }
 .btn-principal {
     background-color: #E91E63;
     color: white;
@@ -82,6 +85,7 @@ nav a:hover { color: #E91E63; }
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 14px;
 }
 .filtros-loja button:hover,
 .filtros-loja button.ativo {
@@ -92,13 +96,7 @@ nav a:hover { color: #E91E63; }
 
 /* PRODUTOS */
 .produtos { padding: 40px 50px 60px 50px; max-width: 1200px; margin: 0 auto; }
-.produtos h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #1a1a1a;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-}
+.produtos h2 { text-align: center; font-size: 32px; color: #1a1a1a; margin-bottom: 40px; letter-spacing: 1px; }
 .grid-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -113,10 +111,7 @@ nav a:hover { color: #E91E63; }
     display: flex;
     flex-direction: column;
 }
-.card-produto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
+.card-produto:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
 .imagem-produto {
     background-color: #f5f5f5;
     font-size: 80px;
@@ -138,17 +133,8 @@ nav a:hover { color: #E91E63; }
 }
 .info-produto h3 { font-size: 18px; color: #1a1a1a; margin-bottom: 5px; }
 .descricao { font-size: 13px; color: #888; margin-bottom: 10px; }
-.preco-antigo {
-    font-size: 14px;
-    color: #999;
-    text-decoration: line-through;
-}
-.preco {
-    font-size: 22px;
-    font-weight: bold;
-    color: #E91E63;
-    margin: 5px 0 15px 0;
-}
+.preco-antigo { font-size: 14px; color: #999; text-decoration: line-through; }
+.preco { font-size: 22px; font-weight: bold; color: #E91E63; margin: 5px 0 15px 0; }
 .btn-comprar {
     background-color: #1a1a1a;
     color: white;
@@ -164,12 +150,7 @@ nav a:hover { color: #E91E63; }
 .btn-comprar:hover { background-color: #E91E63; }
 
 /* SOBRE */
-.sobre-loja {
-    background-color: #1a1a1a;
-    color: #ddd;
-    padding: 60px 50px;
-    text-align: center;
-}
+.sobre-loja { background-color: #1a1a1a; color: #ddd; padding: 60px 50px; text-align: center; }
 .sobre-loja h2 { color: #E91E63; font-size: 32px; margin-bottom: 20px; }
 .sobre-loja p { max-width: 800px; margin: 0 auto; font-size: 17px; line-height: 1.7; }
 
@@ -182,3 +163,35 @@ footer { background-color: #111; color: #aaa; padding: 50px 50px 20px 50px; }
 
 /* CLASSE PARA ESCONDER PRODUTOS FILTRADOS */
 .esconder { display: none; }
+
+/* ============================
+   RESPONSIVIDADE PARA CELULAR
+   ============================ */
+@media (max-width: 768px) {
+    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 12px; }
+    .logo { font-size: 24px; letter-spacing: 1px; }
+    nav { flex-direction: column; width: 100%; gap: 10px; }
+    nav a { font-size: 15px; width: 100%; text-align: center; padding: 5px 0; }
+    .btn-carrinho {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 15px;
+        margin: 5px auto 0 auto;
+        text-align: center;
+    }
+    .hero-loja { padding: 80px 20px; }
+    .hero-conteudo h1 { font-size: 30px; letter-spacing: 1px; }
+    .hero-conteudo p { font-size: 15px; }
+    .filtros-loja { padding: 25px 15px 10px 15px; gap: 8px; }
+    .filtros-loja button { padding: 8px 16px; font-size: 13px; }
+    .produtos { padding: 30px 20px 40px 20px; }
+    .produtos h2 { font-size: 24px; margin-bottom: 25px; }
+    .grid-produtos { grid-template-columns: 1fr; gap: 20px; }
+    .imagem-produto { font-size: 60px; padding: 30px; }
+    .sobre-loja { padding: 40px 20px; }
+    .sobre-loja h2 { font-size: 24px; }
+    .sobre-loja p { font-size: 15px; }
+    footer { padding: 40px 20px 15px 20px; }
+    .footer-conteudo { flex-direction: column; gap: 20px; }
+}

@@ -4,7 +4,7 @@ body { background-color: #FAF7F2; color: #333; }
 
 /* CABEÇALHO */
 header {
-    background-color: #2C1810; /* Marrom escuro */
+    background-color: #2C1810;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -14,23 +14,33 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .logo { font-size: 26px; font-weight: bold; letter-spacing: 1px; }
-.logo span { color: #D4AF37; /* Dourado */ }
+.logo span { color: #D4AF37; }
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-size: 15px;
     transition: 0.3s;
 }
 nav a:hover { color: #D4AF37; }
+
 .btn-whatsapp {
-    background-color: #25D366; /* Verde WhatsApp */
+    background-color: #25D366;
     padding: 10px 20px;
     border-radius: 50px;
     font-weight: bold;
     color: white !important;
+    white-space: nowrap;
 }
 .btn-whatsapp:hover { background-color: #1ebe5b; }
 
@@ -41,11 +51,7 @@ nav a:hover { color: #D4AF37; }
     text-align: center;
     padding: 120px 20px;
 }
-.hero-texto h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
+.hero-texto h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
 .hero-texto h1 span { color: #D4AF37; }
 .hero-texto p {
     font-size: 18px;
@@ -69,23 +75,9 @@ nav a:hover { color: #D4AF37; }
 .btn-principal:hover { background-color: #b8962c; transform: scale(1.05); }
 
 /* CARDÁPIO */
-.cardapio {
-    padding: 60px 50px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.cardapio h2 {
-    text-align: center;
-    font-size: 36px;
-    color: #2C1810;
-    margin-bottom: 10px;
-}
-.subtitulo {
-    text-align: center;
-    color: #888;
-    margin-bottom: 50px;
-    font-style: italic;
-}
+.cardapio { padding: 60px 50px; max-width: 1000px; margin: 0 auto; }
+.cardapio h2 { text-align: center; font-size: 36px; color: #2C1810; margin-bottom: 10px; }
+.subtitulo { text-align: center; color: #888; margin-bottom: 50px; font-style: italic; }
 .categoria { margin-bottom: 50px; }
 .categoria h3 {
     font-size: 24px;
@@ -130,6 +122,7 @@ nav a:hover { color: #D4AF37; }
     font-weight: bold;
     transition: 0.3s;
     display: inline-block;
+    white-space: nowrap;
 }
 .btn-pedir:hover { background-color: #1ebe5b; }
 
@@ -144,23 +137,41 @@ nav a:hover { color: #D4AF37; }
 .sobre-restaurante p { max-width: 700px; margin: 0 auto; font-size: 17px; line-height: 1.6; }
 
 /* RODAPÉ */
-footer {
-    background-color: #1a0e08;
-    color: #aaa;
-    padding: 50px 50px 20px 50px;
-}
-.footer-conteudo {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
-}
+footer { background-color: #1a0e08; color: #aaa; padding: 50px 50px 20px 50px; }
+.footer-conteudo { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
 .footer-conteudo h3 { color: #D4AF37; margin-bottom: 10px; font-size: 16px; }
 .footer-conteudo p { font-size: 14px; margin-bottom: 5px; }
-.copyright {
-    text-align: center;
-    font-size: 12px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
+.copyright { text-align: center; font-size: 12px; border-top: 1px solid #333; padding-top: 20px; }
+
+/* ============================
+   RESPONSIVIDADE PARA CELULAR
+   ============================ */
+@media (max-width: 768px) {
+    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 12px; }
+    .logo { font-size: 24px; }
+    nav { flex-direction: column; width: 100%; gap: 10px; }
+    nav a { font-size: 15px; width: 100%; text-align: center; padding: 5px 0; }
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 15px;
+        margin: 5px auto 0 auto;
+        text-align: center;
+    }
+    .hero-restaurante { padding: 70px 20px; }
+    .hero-texto h1 { font-size: 30px; }
+    .hero-texto p { font-size: 15px; }
+    .btn-principal { padding: 12px 30px; font-size: 15px; }
+    .cardapio { padding: 40px 20px; }
+    .cardapio h2 { font-size: 26px; }
+    .categoria h3 { font-size: 20px; }
+    .grid-pratos { grid-template-columns: 1fr; gap: 15px; }
+    .prato { flex-direction: column; align-items: flex-start; }
+    .prato-preco { width: 100%; text-align: left; margin-top: 10px; }
+    .sobre-restaurante { padding: 40px 20px; }
+    .sobre-restaurante h2 { font-size: 24px; }
+    .sobre-restaurante p { font-size: 15px; }
+    footer { padding: 40px 20px 15px 20px; }
+    .footer-conteudo { flex-direction: column; gap: 20px; }
 }

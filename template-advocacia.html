@@ -1,196 +1,138 @@
-/* RESET E GERAL */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
-body { background-color: #F8F9FA; color: #333; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almeida & Rocha - Advocacia</title>
+    <link rel="stylesheet" href="template-advocacia.css">
+</head>
+<body>
 
-/* CABEÇALHO */
-header {
-    background-color: #0A1F44;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.logo { font-size: 26px; font-weight: bold; letter-spacing: 1px; }
-.logo span { color: #C9A227; }
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Almeida & <span>Rocha</span></div>
+        <nav>
+            <a href="#areas">Áreas de Atuação</a>
+            <a href="#sobre">O Escritório</a>
+            <a href="#contato" class="btn-contato">Agendar Consulta</a>
+        </nav>
+    </header>
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-}
-nav a:hover { color: #C9A227; }
+    <!-- Hero Section -->
+    <section class="hero-advocacia">
+        <div class="hero-conteudo">
+            <h1>Defendendo os seus direitos com <span>experiência e dedicação</span>.</h1>
+            <p>Há mais de 20 anos oferecendo soluções jurídicas personalizadas para pessoas e empresas em Belo Horizonte.</p>
+            <a href="#contato" class="btn-principal">Fale com um Advogado</a>
+        </div>
+    </section>
 
-.btn-contato {
-    background-color: #C9A227;
-    color: #0A1F44 !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.btn-contato:hover { background-color: #b8962c; }
+    <!-- Áreas de Atuação -->
+    <section class="areas" id="areas">
+        <h2>Áreas de Atuação</h2>
+        <p class="subtitulo">Atuamos de forma estratégica nas principais áreas do Direito.</p>
 
-/* HERO */
-.hero-advocacia {
-    background: linear-gradient(rgba(10, 31, 68, 0.85), rgba(10, 31, 68, 0.85)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200') center/cover;
-    color: white;
-    text-align: center;
-    padding: 140px 20px;
-}
-.hero-conteudo h1 {
-    font-size: 44px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.hero-conteudo h1 span { color: #C9A227; }
-.hero-conteudo p {
-    font-size: 18px;
-    color: #ddd;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.btn-principal {
-    background-color: #C9A227;
-    color: #0A1F44;
-    text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    transition: 0.3s;
-}
-.btn-principal:hover { background-color: #b8962c; transform: scale(1.05); }
+        <div class="grid-areas">
+            <div class="area-card">
+                <div class="icone">⚖️</div>
+                <h3>Direito Civil</h3>
+                <p>Contratos, responsabilidade civil, indenizações e questões imobiliárias.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">👨‍👩‍👧</div>
+                <h3>Direito de Família</h3>
+                <p>Divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">💼</div>
+                <h3>Direito Trabalhista</h3>
+                <p>Defesa de trabalhadores e empresas em reclamações e acordos.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">🏢</div>
+                <h3>Direito Empresarial</h3>
+                <p>Constituição de empresas, contratos societários e recuperação judicial.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">📜</div>
+                <h3>Direito Tributário</h3>
+                <p>Planejamento tributário, defesas fiscais e recuperação de créditos.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">🛡️</div>
+                <h3>Direito Penal</h3>
+                <p>Defesa criminal, habeas corpus e acompanhamento de inquéritos.</p>
+            </div>
+        </div>
+    </section>
 
-/* ÁREAS DE ATUAÇÃO */
-.areas { padding: 60px 50px; max-width: 1100px; margin: 0 auto; }
-.areas h2 { text-align: center; font-size: 36px; color: #0A1F44; margin-bottom: 10px; }
-.subtitulo { text-align: center; color: #777; margin-bottom: 50px; font-style: italic; }
-.grid-areas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-.area-card {
-    background: white;
-    padding: 35px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid #0A1F44;
-    transition: 0.3s;
-}
-.area-card:hover { transform: translateY(-8px); border-top-color: #C9A227; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.area-card .icone { font-size: 40px; margin-bottom: 15px; }
-.area-card h3 { color: #0A1F44; font-size: 20px; margin-bottom: 10px; }
-.area-card p { color: #666; font-size: 14px; line-height: 1.5; }
+    <!-- Sobre o Escritório -->
+    <section class="sobre-escritorio" id="sobre">
+        <div class="sobre-conteudo">
+            <h2>Tradição e Resultados</h2>
+            <p>Fundado em 2004, o escritório Almeida & Rocha consolidou-se como referência em Belo Horizonte, unindo a experiência de advogados sêniores com a agilidade de uma equipe moderna.</p>
+            <p>Nosso compromisso é oferecer um atendimento personalizado, entendendo a fundo cada caso para construir a melhor estratégia jurídica.</p>
+            <div class="numeros">
+                <div class="numero">
+                    <strong>20+</strong>
+                    <span>Anos de Experiência</span>
+                </div>
+                <div class="numero">
+                    <strong>3000+</strong>
+                    <span>Casos Resolvidos</span>
+                </div>
+                <div class="numero">
+                    <strong>98%</strong>
+                    <span>Clientes Satisfeitos</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* SOBRE */
-.sobre-escritorio {
-    background-color: #0A1F44;
-    color: #ddd;
-    padding: 70px 50px;
-    text-align: center;
-}
-.sobre-escritorio h2 { color: #C9A227; font-size: 34px; margin-bottom: 25px; }
-.sobre-escritorio p { max-width: 800px; margin: 0 auto 15px auto; font-size: 17px; line-height: 1.7; }
-.numeros {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-.numero strong { display: block; font-size: 40px; color: #C9A227; }
-.numero span { font-size: 14px; color: #aaa; }
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <h2>Agende uma Consulta</h2>
+        <p class="subtitulo">Preencha o formulário ou fale diretamente conosco.</p>
+        <form class="form-contato" onsubmit="event.preventDefault(); alert('Mensagem enviada! Entraremos em contato.');">
+            <input type="text" placeholder="Seu Nome Completo" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <input type="tel" placeholder="Seu Telefone / WhatsApp" required>
+            <select required>
+                <option value="">Selecione a Área</option>
+                <option>Direito Civil</option>
+                <option>Direito de Família</option>
+                <option>Direito Trabalhista</option>
+                <option>Direito Empresarial</option>
+                <option>Direito Tributário</option>
+                <option>Direito Penal</option>
+            </select>
+            <textarea placeholder="Descreva brevemente o seu caso..." rows="5"></textarea>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </section>
 
-/* CONTATO */
-.contato { padding: 70px 20px; max-width: 600px; margin: 0 auto; }
-.contato h2 { text-align: center; font-size: 34px; color: #0A1F44; margin-bottom: 10px; }
-.form-contato { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
-.form-contato input,
-.form-contato select,
-.form-contato textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-}
-.form-contato input:focus,
-.form-contato select:focus,
-.form-contato textarea:focus { outline: none; border-color: #C9A227; }
-.btn-enviar {
-    background-color: #0A1F44;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.btn-enviar:hover { background-color: #C9A227; color: #0A1F44; }
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-conteudo">
+            <div>
+                <h3>Almeida & Rocha</h3>
+                <p>OAB/MG 12.345</p>
+                <p>Av. Afonso Pena, 1000 - Centro</p>
+                <p>Belo Horizonte / MG</p>
+            </div>
+            <div>
+                <h3>Horário</h3>
+                <p>Segunda a Sexta</p>
+                <p>08h às 18h</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p>(31) 3333-3333</p>
+                <p>contato@almeidarocha.adv.br</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Almeida & Rocha Advocacia. Todos os direitos reservados.</p>
+    </footer>
 
-/* RODAPÉ */
-footer { background-color: #06122b; color: #aaa; padding: 50px 50px 20px 50px; }
-.footer-conteudo { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
-.footer-conteudo h3 { color: #C9A227; margin-bottom: 10px; font-size: 16px; }
-.footer-conteudo p { font-size: 14px; margin-bottom: 5px; }
-.copyright { text-align: center; font-size: 12px; border-top: 1px solid #333; padding-top: 20px; }
-
-/* ============================
-   RESPONSIVIDADE PARA CELULAR
-   ============================ */
-@media (max-width: 768px) {
-    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 12px; }
-    .logo { font-size: 24px; }
-    nav { flex-direction: column; width: 100%; gap: 10px; }
-    nav a { font-size: 15px; width: 100%; text-align: center; padding: 5px 0; }
-    .btn-contato {
-        width: 100%;
-        max-width: 280px;
-        padding: 12px 20px;
-        font-size: 15px;
-        margin: 5px auto 0 auto;
-        text-align: center;
-    }
-    .hero-advocacia { padding: 70px 20px; }
-    .hero-conteudo h1 { font-size: 28px; }
-    .hero-conteudo p { font-size: 15px; }
-    .btn-principal { padding: 12px 30px; font-size: 15px; }
-    .areas { padding: 40px 20px; }
-    .areas h2 { font-size: 26px; }
-    .grid-areas { grid-template-columns: 1fr; gap: 20px; }
-    .area-card { padding: 25px 20px; }
-    .sobre-escritorio { padding: 40px 20px; }
-    .sobre-escritorio h2 { font-size: 26px; }
-    .sobre-escritorio p { font-size: 15px; }
-    .numeros { gap: 30px; }
-    .numero strong { font-size: 32px; }
-    .contato { padding: 40px 20px; }
-    .contato h2 { font-size: 26px; }
-    footer { padding: 40px 20px 15px 20px; }
-    .footer-conteudo { flex-direction: column; gap: 20px; }
-}
+</body>
+</html>
