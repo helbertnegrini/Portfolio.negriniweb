@@ -1,0 +1,131 @@
+/* RESET E GERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background-color: #f4f7f6; color: #333; }
+
+/* CABEÇALHO */
+header {
+    background-color: #0B2859;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.logo { font-size: 24px; font-weight: bold; }
+.logo span { color: #F58220; }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+nav .btn-contato {
+    background-color: #F58220;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav .btn-contato:hover { background-color: #D96F15; }
+
+/* TÍTULOS */
+.titulo-pagina {
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+}
+.titulo-pagina h1 {
+    color: #0B2859;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.titulo-pagina p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* BOTÕES DE FILTRO */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.filtros button {
+    background-color: #fff;
+    color: #0B2859;
+    border: 2px solid #0B2859;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.filtros button:hover,
+.filtros button.ativo {
+    background-color: #0B2859;
+    color: white;
+}
+
+/* GRID DE PROJETOS */
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 50px 50px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CARTÃO DE PROJETO */
+.card-projeto {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #195AB4;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.card-projeto:hover {
+    transform: translateY(-10px);
+    border-top-color: #F58220;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.card-projeto .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.card-projeto h3 {
+    color: #0B2859;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card-projeto p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* BOTÃO DE SELEÇÃO */
+.btn-selecionar {
+    background-color: #F58220;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-selecionar:hover {
+    background-color: #D96F15;
+    transform: scale(1.05);
+}
+
+/* CLASSE PARA ESCONDER PROJETOS FILTRADOS */
+.esconder { display: none; }

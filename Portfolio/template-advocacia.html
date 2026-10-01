@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almeida & Rocha - Advocacia</title>
+    <link rel="stylesheet" href="template-advocacia.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Almeida & <span>Rocha</span></div>
+        <nav>
+            <a href="#areas">Áreas de Atuação</a>
+            <a href="#sobre">O Escritório</a>
+            <a href="#contato" class="btn-contato">Agendar Consulta</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-advocacia">
+        <div class="hero-conteudo">
+            <h1>Defendendo os seus direitos com <span>experiência e dedicação</span>.</h1>
+            <p>Há mais de 20 anos oferecendo soluções jurídicas personalizadas para pessoas e empresas em Belo Horizonte.</p>
+            <a href="#contato" class="btn-principal">Fale com um Advogado</a>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section class="areas" id="areas">
+        <h2>Áreas de Atuação</h2>
+        <p class="subtitulo">Atuamos de forma estratégica nas principais áreas do Direito.</p>
+
+        <div class="grid-areas">
+            <div class="area-card">
+                <div class="icone">⚖️</div>
+                <h3>Direito Civil</h3>
+                <p>Contratos, responsabilidade civil, indenizações e questões imobiliárias.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">👨‍👩‍👧</div>
+                <h3>Direito de Família</h3>
+                <p>Divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">💼</div>
+                <h3>Direito Trabalhista</h3>
+                <p>Defesa de trabalhadores e empresas em reclamações e acordos.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">🏢</div>
+                <h3>Direito Empresarial</h3>
+                <p>Constituição de empresas, contratos societários e recuperação judicial.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">📜</div>
+                <h3>Direito Tributário</h3>
+                <p>Planejamento tributário, defesas fiscais e recuperação de créditos.</p>
+            </div>
+            <div class="area-card">
+                <div class="icone">🛡️</div>
+                <h3>Direito Penal</h3>
+                <p>Defesa criminal, habeas corpus e acompanhamento de inquéritos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Escritório -->
+    <section class="sobre-escritorio" id="sobre">
+        <div class="sobre-conteudo">
+            <h2>Tradição e Resultados</h2>
+            <p>Fundado em 2004, o escritório Almeida & Rocha consolidou-se como referência em Belo Horizonte, unindo a experiência de advogados sêniores com a agilidade de uma equipe moderna.</p>
+            <p>Nosso compromisso é oferecer um atendimento personalizado, entendendo a fundo cada caso para construir a melhor estratégia jurídica.</p>
+            <div class="numeros">
+                <div class="numero">
+                    <strong>20+</strong>
+                    <span>Anos de Experiência</span>
+                </div>
+                <div class="numero">
+                    <strong>3000+</strong>
+                    <span>Casos Resolvidos</span>
+                </div>
+                <div class="numero">
+                    <strong>98%</strong>
+                    <span>Clientes Satisfeitos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <h2>Agende uma Consulta</h2>
+        <p class="subtitulo">Preencha o formulário ou fale diretamente conosco.</p>
+        <form class="form-contato" onsubmit="event.preventDefault(); alert('Mensagem enviada! Entraremos em contato.');">
+            <input type="text" placeholder="Seu Nome Completo" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <input type="tel" placeholder="Seu Telefone / WhatsApp" required>
+            <select required>
+                <option value="">Selecione a Área</option>
+                <option>Direito Civil</option>
+                <option>Direito de Família</option>
+                <option>Direito Trabalhista</option>
+                <option>Direito Empresarial</option>
+                <option>Direito Tributário</option>
+                <option>Direito Penal</option>
+            </select>
+            <textarea placeholder="Descreva brevemente o seu caso..." rows="5"></textarea>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-conteudo">
+            <div>
+                <h3>Almeida & Rocha</h3>
+                <p>OAB/MG 12.345</p>
+                <p>Av. Afonso Pena, 1000 - Centro</p>
+                <p>Belo Horizonte / MG</p>
+            </div>
+            <div>
+                <h3>Horário</h3>
+                <p>Segunda a Sexta</p>
+                <p>08h às 18h</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p>(31) 3333-3333</p>
+                <p>contato@almeidarocha.adv.br</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Almeida & Rocha Advocacia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
