@@ -1,3 +1,4 @@
+// FILTRAR PROJETOS DO PORTFÓLIO
 function filtrarProjetos(categoria, event) {
     const projetos = document.querySelectorAll('.card-projeto');
     const botoes = document.querySelectorAll('.filtros button');
@@ -15,3 +16,23 @@ function filtrarProjetos(categoria, event) {
         }
     });
 }
+
+// ABRIR MODAL DE PACOTES
+function abrirModalPacotes() {
+    document.getElementById('modalPacotes').style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
+}
+
+// FECHAR MODAL DE PACOTES
+function fecharModalPacotes() {
+    document.getElementById('modalPacotes').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Volta a rolagem
+}
+
+// FECHAR MODAL AO CLICAR FORA
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('modalPacotes');
+    if (event.target === modal) {
+        fecharModalPacotes();
+    }
+});

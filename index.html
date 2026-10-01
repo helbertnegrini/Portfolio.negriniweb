@@ -8,8 +8,8 @@
     <!-- Meta tags para LinkedIn e Redes Sociais -->
     <meta property="og:title" content="Portfólio de Criação de Sites - Negrini Web" />
     <meta property="og:description" content="Sites personalizados para o seu negócio: Landing Pages, Sites Institucionais e Lojas Virtuais. Escolha o modelo ideal e nós criamos a sua presença digital." />
-    <meta property="og:image" content="https://seu-usuario.github.io/nome-do-repositorio/preview.jpg" />
-    <meta property="og:url" content="https://seu-usuario.github.io/nome-do-repositorio/" />
+    <meta property="og:image" content="https://helbertnegrini.github.io/negriniweb-portfolio/Negrini%20Web%20.jpeg" />
+    <meta property="og:url" content="https://helbertnegrini.github.io/negriniweb-portfolio/" />
     <meta property="og:type" content="website" />
     
     <link rel="stylesheet" href="portfolio.css">
@@ -20,34 +20,33 @@
         <div class="logo">Negrini <span>Web</span></div>
         <nav>
             <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#" class="btn-contato">Solicitar Orçamento</a>
+            <a href="#portfolio">Portfólio</a>
         </nav>
     </header>
 
     <main>
-        <section class="titulo-pagina">
+        <section class="titulo-pagina" id="portfolio">
             <h1>Sites personalizados para o seu negócio</h1>
             <p>Escolha o modelo ideal e nós criamos a sua presença digital.</p>
         </section>
 
         <!-- Botões de Filtro -->
         <section class="filtros">
-            <button class="ativo" onclick="filtrarProjetos('todos')">Todos</button>
-            <button onclick="filtrarProjetos('landing')">Landing Pages</button>
-            <button onclick="filtrarProjetos('institucional')">Sites Institucionais</button>
-            <button onclick="filtrarProjetos('loja')">Lojas Virtuais</button>
+            <button class="ativo" onclick="filtrarProjetos('todos', event)">Todos</button>
+            <button onclick="filtrarProjetos('landing', event)">Landing Pages</button>
+            <button onclick="filtrarProjetos('institucional', event)">Sites Institucionais</button>
+            <button onclick="filtrarProjetos('loja', event)">Lojas Virtuais</button>
         </section>
 
         <!-- Grid de Projetos -->
         <section class="grid-portfolio" id="grid-portfolio">
-            
+
             <!-- Projeto 1: Landing Page de Vendas -->
             <article class="card-projeto" data-categoria="landing">
                 <div class="icone">🚀</div>
                 <h3>Landing Page de Vendas</h3>
                 <p>Página de alta conversão para infoprodutores, cursos e mentorias.</p>
-                <a href="template-vendas.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-vendas.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
             <!-- Projeto 2: Site para Restaurante -->
@@ -55,7 +54,7 @@
                 <div class="icone">🍽️</div>
                 <h3>Site para Restaurante</h3>
                 <p>Cardápio digital, fotos dos pratos e botão de pedido pelo WhatsApp.</p>
-                <a href="template-restaurante.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-restaurante.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
             <!-- Projeto 3: Loja Virtual Simples -->
@@ -63,7 +62,7 @@
                 <div class="icone">🛍️</div>
                 <h3>Loja Virtual Essencial</h3>
                 <p>Catálogo de produtos, carrinho e checkout integrado.</p>
-                <a href="template-loja.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-loja.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
             <!-- Projeto 4: Site para Advogado -->
@@ -71,7 +70,7 @@
                 <div class="icone">⚖️</div>
                 <h3>Site para Escritório de Advocacia</h3>
                 <p>Layout sóbrio, áreas de atuação e formulário de contato.</p>
-                <a href="template-advocacia.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-advocacia.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
             <!-- Projeto 5: Template de Captura de Leads -->
@@ -79,7 +78,7 @@
                 <div class="icone">📧</div>
                 <h3>Captura de Leads</h3>
                 <p>Página de conversão para captar e-mails e WhatsApp de potenciais clientes.</p>
-                <a href="template-leads.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-leads.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
             <!-- Projeto 6: Site para Clínica -->
@@ -87,11 +86,78 @@
                 <div class="icone">🩺</div>
                 <h3>Site para Clínica Médica</h3>
                 <p>Apresentação dos profissionais, especialidades e agendamento.</p>
-                <a href="template-clinica.html" class="btn-selecionar" style="text-decoration: none; display: inline-block;">Ver Exemplo</a>
+                <a href="template-clinica.html" class="btn-selecionar">Ver Exemplo</a>
             </article>
 
         </section>
+
+        <!-- CTA Final: Botão de Orçamento -->
+        <section class="cta-final">
+            <h2>Pronto para ter o seu site?</h2>
+            <p>Clique no botão abaixo, escolha o pacote ideal e fale conosco pelo WhatsApp.</p>
+            <button onclick="abrirModalPacotes()" class="btn-orcamento">Solicitar Orçamento</button>
+        </section>
     </main>
+
+    <!-- MODAL DE PACOTES (aparece ao clicar no botão) -->
+    <div class="modal-overlay" id="modalPacotes">
+        <div class="modal-conteudo">
+            <button class="btn-fechar" onclick="fecharModalPacotes()">✕</button>
+            <h2>Escolha o Pacote Ideal</h2>
+            <p class="subtitulo-modal">Cada pacote inclui hospedagem, domínio e suporte. Clique no que combina com você.</p>
+
+            <div class="grid-pacotes">
+
+                <!-- Pacote 1: Essencial -->
+                <div class="card-pacote">
+                    <h3>Essencial</h3>
+                    <p class="preco-pacote">A partir de <span>R$ 1.500</span></p>
+                    <ul class="lista-pacote">
+                        <li>✅ Site com até 4 páginas</li>
+                        <li>✅ Design responsivo</li>
+                        <li>✅ Formulário de contato</li>
+                        <li>✅ Botão de WhatsApp</li>
+                        <li>✅ Hospedagem e domínio configurados</li>
+                    </ul>
+                    <a href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Pacote%20Essencial%20da%20Negrini%20Web." class="btn-pacote" target="_blank">Quero o Essencial</a>
+                </div>
+
+                <!-- Pacote 2: Profissional -->
+                <div class="card-pacote destaque">
+                    <div class="selo-popular">Mais Popular</div>
+                    <h3>Profissional</h3>
+                    <p class="preco-pacote">A partir de <span>R$ 3.500</span></p>
+                    <ul class="lista-pacote">
+                        <li>✅ Site com até 8 páginas</li>
+                        <li>✅ Design responsivo e moderno</li>
+                        <li>✅ SEO básico (Google)</li>
+                        <li>✅ Integração com WhatsApp</li>
+                        <li>✅ Blog ou catálogo de produtos</li>
+                        <li>✅ Hospedagem e domínio configurados</li>
+                    </ul>
+                    <a href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Pacote%20Profissional%20da%20Negrini%20Web." class="btn-pacote" target="_blank">Quero o Profissional</a>
+                </div>
+
+                <!-- Pacote 3: Premium -->
+                <div class="card-pacote">
+                    <h3>Premium</h3>
+                    <p class="preco-pacote">A partir de <span>R$ 7.000</span></p>
+                    <ul class="lista-pacote">
+                        <li>✅ Site com até 15 páginas</li>
+                        <li>✅ E-commerce completo</li>
+                        <li>✅ Checkout integrado (Pix, Cartão, Boleto)</li>
+                        <li>✅ Integração com CRM e automações</li>
+                        <li>✅ SEO avançado e Google Analytics</li>
+                        <li>✅ Suporte prioritário por 6 meses</li>
+                    </ul>
+                    <a href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Pacote%20Premium%20da%20Negrini%20Web." class="btn-pacote" target="_blank">Quero o Premium</a>
+                </div>
+
+            </div>
+
+            <p class="modal-rodape">Não encontrou o que procurava? <a href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20personalizado." target="_blank">Fale conosco para um orçamento personalizado</a>.</p>
+        </div>
+    </div>
 
     <script src="portfolio.js"></script>
 </body>

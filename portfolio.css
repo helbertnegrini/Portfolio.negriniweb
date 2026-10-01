@@ -10,23 +10,26 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .logo { font-size: 24px; font-weight: bold; }
 .logo span { color: #F58220; }
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-weight: 500;
-}
-nav .btn-contato {
-    background-color: #F58220;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: bold;
+    font-size: 15px;
     transition: 0.3s;
 }
-nav .btn-contato:hover { background-color: #D96F15; }
+nav a:hover { color: #F58220; }
 
 /* TÍTULOS */
 .titulo-pagina {
@@ -50,6 +53,7 @@ nav .btn-contato:hover { background-color: #D96F15; }
     gap: 15px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    padding: 0 15px;
 }
 .filtros button {
     background-color: #fff;
@@ -60,6 +64,7 @@ nav .btn-contato:hover { background-color: #D96F15; }
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 14px;
 }
 .filtros button:hover,
 .filtros button.ativo {
@@ -94,22 +99,9 @@ nav .btn-contato:hover { background-color: #D96F15; }
     border-top-color: #F58220;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.card-projeto .icone {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-.card-projeto h3 {
-    color: #0B2859;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.card-projeto p {
-    color: #666;
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
+.card-projeto .icone { font-size: 40px; margin-bottom: 15px; }
+.card-projeto h3 { color: #0B2859; font-size: 20px; margin-bottom: 10px; }
+.card-projeto p { color: #666; font-size: 15px; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
 
 /* BOTÃO DE SELEÇÃO */
 .btn-selecionar {
@@ -121,11 +113,212 @@ nav .btn-contato:hover { background-color: #D96F15; }
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
-.btn-selecionar:hover {
-    background-color: #D96F15;
-    transform: scale(1.05);
+.btn-selecionar:hover { background-color: #D96F15; transform: scale(1.05); }
+
+/* CTA FINAL (BOTÃO DE ORÇAMENTO) */
+.cta-final {
+    background-color: #0B2859;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
+.cta-final h2 { font-size: 28px; margin-bottom: 15px; }
+.cta-final p { font-size: 16px; color: #F2F2F2; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.btn-orcamento {
+    background-color: #F58220;
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(245, 130, 32, 0.4);
+}
+.btn-orcamento:hover { background-color: #D96F15; transform: scale(1.05); }
+
+/* ============================
+   MODAL DE PACOTES
+   ============================ */
+.modal-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+.modal-conteudo {
+    background-color: #f4f7f6;
+    border-radius: 20px;
+    max-width: 1100px;
+    width: 100%;
+    padding: 50px 30px 30px 30px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: aparecerModal 0.3s ease;
+}
+@keyframes aparecerModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #0B2859;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-fechar:hover { background: #F58220; transform: rotate(90deg); }
+
+.modal-conteudo h2 {
+    text-align: center;
+    color: #0B2859;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.subtitulo-modal {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-pacotes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.card-pacote {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-top: 5px solid #195AB4;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card-pacote:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-top-color: #F58220;
+}
+.card-pacote.destaque {
+    border: 3px solid #F58220;
+    border-top: 5px solid #F58220;
+}
+.selo-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F58220;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.card-pacote h3 { color: #0B2859; font-size: 22px; margin-bottom: 10px; text-align: center; }
+.preco-pacote { color: #666; font-size: 14px; margin-bottom: 20px; text-align: center; }
+.preco-pacote span { display: block; color: #F58220; font-size: 28px; font-weight: bold; margin-top: 5px; }
+.lista-pacote { list-style: none; text-align: left; margin-bottom: 25px; flex-grow: 1; }
+.lista-pacote li { font-size: 13px; color: #444; padding: 7px 0; border-bottom: 1px solid #f0f0f0; }
+.btn-pacote {
+    background-color: #0B2859;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.3s;
+    display: block;
+}
+.btn-pacote:hover { background-color: #F58220; transform: scale(1.03); }
+.card-pacote.destaque .btn-pacote { background-color: #F58220; }
+.card-pacote.destaque .btn-pacote:hover { background-color: #D96F15; }
+.modal-rodape {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+.modal-rodape a { color: #F58220; font-weight: bold; text-decoration: none; }
+.modal-rodape a:hover { text-decoration: underline; }
 
 /* CLASSE PARA ESCONDER PROJETOS FILTRADOS */
 .esconder { display: none; }
+
+/* ============================
+   RESPONSIVIDADE PARA CELULAR
+   ============================ */
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 10px; }
+    .logo { font-size: 26px; }
+    nav { justify-content: center; gap: 15px; }
+    nav a { font-size: 14px; }
+
+    /* Títulos */
+    .titulo-pagina { padding: 30px 20px 20px 20px; }
+    .titulo-pagina h1 { font-size: 24px; }
+    .titulo-pagina p { font-size: 15px; }
+
+    /* Filtros */
+    .filtros { gap: 8px; padding: 0 15px; margin-bottom: 30px; }
+    .filtros button { padding: 8px 16px; font-size: 13px; }
+
+    /* Grid de projetos */
+    .grid-portfolio { grid-template-columns: 1fr; padding: 0 20px 30px 20px; gap: 20px; }
+    .card-projeto { padding: 25px 20px; }
+    .card-projeto h3 { font-size: 18px; }
+    .card-projeto p { font-size: 14px; }
+
+    /* CTA Final */
+    .cta-final { padding: 40px 20px; }
+    .cta-final h2 { font-size: 22px; }
+    .cta-final p { font-size: 15px; }
+    .btn-orcamento { padding: 15px 30px; font-size: 16px; width: 100%; max-width: 320px; }
+
+    /* Modal de Pacotes */
+    .modal-conteudo { padding: 50px 20px 20px 20px; }
+    .modal-conteudo h2 { font-size: 24px; }
+    .subtitulo-modal { font-size: 14px; margin-bottom: 25px; }
+    .grid-pacotes { gap: 20px; }
+    .card-pacote { width: 100%; max-width: 350px; }
+    .preco-pacote span { font-size: 26px; }
+    .btn-fechar { width: 35px; height: 35px; font-size: 18px; top: 10px; right: 10px; }
+}
