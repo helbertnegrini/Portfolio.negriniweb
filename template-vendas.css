@@ -1,0 +1,113 @@
+/* RESET E GERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background-color: #f4f7f6; color: #333; }
+
+/* CABEÇALHO */
+header {
+    background-color: #0B2859;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+.logo { font-size: 22px; font-weight: bold; }
+.logo span { color: #F58220; }
+.selo-garantia { font-size: 14px; color: #F2F2F2; }
+
+/* HERO SECTION */
+.hero-vendas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0B2859 0%, #195AB4 100%);
+    color: white;
+    padding: 80px 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.hero-conteudo { flex: 1; min-width: 300px; }
+.hero-conteudo h1 { font-size: 42px; line-height: 1.2; margin-bottom: 20px; }
+.hero-conteudo h1 span { color: #F58220; }
+.hero-conteudo p { font-size: 18px; color: #F2F2F2; margin-bottom: 30px; }
+.hero-imagem { flex: 1; min-width: 300px; text-align: center; }
+.placeholder-img {
+    background-color: rgba(255,255,255,0.1);
+    border: 2px dashed #F58220;
+    padding: 50px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.selo-abaixo { font-size: 14px; color: #ccc; margin-top: 15px; }
+
+/* BOTÕES */
+.btn-compra {
+    background-color: #F58220;
+    color: white;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(245, 130, 32, 0.4);
+}
+.btn-compra:hover { background-color: #D96F15; transform: translateY(-3px); }
+
+/* BENEFÍCIOS */
+.beneficios-vendas { padding: 60px 20px; text-align: center; }
+.beneficios-vendas h2 { color: #0B2859; font-size: 32px; margin-bottom: 40px; }
+.grid-beneficios { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.beneficio {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.beneficio .icone { font-size: 40px; margin-bottom: 15px; }
+.beneficio h3 { color: #0B2859; margin-bottom: 10px; }
+
+/* DEPOIMENTOS */
+.depoimentos { background-color: #F2F2F2; padding: 60px 20px; text-align: center; }
+.depoimentos h2 { color: #0B2859; font-size: 32px; margin-bottom: 40px; }
+.card-depoimento {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    border-left: 5px solid #F58220;
+    text-align: left;
+}
+.card-depoimento p { font-style: italic; margin-bottom: 10px; }
+.card-depoimento span { font-weight: bold; color: #0B2859; }
+
+/* OFERTA */
+.oferta { padding: 60px 20px; text-align: center; }
+.oferta h2 { color: #0B2859; font-size: 32px; margin-bottom: 30px; }
+.caixa-preco {
+    background: white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-top: 5px solid #F58220;
+}
+.preco-antigo { text-decoration: line-through; color: #888; }
+.preco-atual { font-size: 24px; margin: 10px 0; }
+.preco-atual span { font-size: 40px; color: #F58220; font-weight: bold; }
+.parcelamento { color: #666; margin-bottom: 20px; }
+.garantia { font-size: 12px; color: #888; margin-top: 15px; }
+
+/* RODAPÉ */
+footer {
+    background-color: #0B2859;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
