@@ -1,147 +1,177 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor & Arte - Restaurante</title>
-    <link rel="stylesheet" href="template-restaurante.css">
-</head>
-<body>
+/* RESET E GERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+body { background-color: #FAF7F2; color: #333; }
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">Sabor & <span>Arte</span></div>
-        <nav>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-            <a href="https://wa.me/5531999999999" class="btn-whatsapp">Pedir Agora</a>
-        </nav>
-    </header>
+/* CABEÇALHO */
+header {
+    background-color: #2C1810;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.logo { font-size: 26px; font-weight: bold; letter-spacing: 1px; }
+.logo span { color: #D4AF37; }
 
-    <!-- Hero Section -->
-    <section class="hero-restaurante">
-        <div class="hero-texto">
-            <h1>Uma experiência <span>gastronômica</span> inesquecível.</h1>
-            <p>Ingredientes frescos, receitas tradicionais e um ambiente acolhedor para você e sua família.</p>
-            <a href="#cardapio" class="btn-principal">Ver Cardápio</a>
-        </div>
-    </section>
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav a:hover { color: #D4AF37; }
 
-    <!-- Seção Cardápio -->
-    <section class="cardapio" id="cardapio">
-        <h2>Nosso Cardápio</h2>
-        <p class="subtitulo">Escolha seus pratos favoritos e peça pelo WhatsApp.</p>
+.btn-whatsapp {
+    background-color: #25D366;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white !important;
+    white-space: nowrap;
+}
+.btn-whatsapp:hover { background-color: #1ebe5b; }
 
-        <!-- Categoria: Entradas -->
-        <div class="categoria">
-            <h3>Entradas</h3>
-            <div class="grid-pratos">
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Bruschetta Italiana</h4>
-                        <p>Pão italiano, tomate, manjericão e azeite.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 28,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Bruschetta" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Caldo Verde</h4>
-                        <p>Caldinho cremoso de batata com couve e linguiça.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 22,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Caldo%20Verde" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+/* HERO */
+.hero-restaurante {
+    background: linear-gradient(rgba(44, 24, 16, 0.8), rgba(44, 24, 16, 0.8)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero-texto h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
+.hero-texto h1 span { color: #D4AF37; }
+.hero-texto p {
+    font-size: 18px;
+    color: #f0e6d2;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-principal {
+    background-color: #D4AF37;
+    color: #2C1810;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn-principal:hover { background-color: #b8962c; transform: scale(1.05); }
 
-        <!-- Categoria: Pratos Principais -->
-        <div class="categoria">
-            <h3>Pratos Principais</h3>
-            <div class="grid-pratos">
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Filé à Parmegiana</h4>
-                        <p>Filé empanado, molho de tomate e queijo gratinado.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 65,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Parmegiana" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Salmão Grelhado</h4>
-                        <p>Filé de salmão com legumes e arroz de amêndoas.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 78,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Salmão" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+/* CARDÁPIO */
+.cardapio { padding: 60px 50px; max-width: 1000px; margin: 0 auto; }
+.cardapio h2 { text-align: center; font-size: 36px; color: #2C1810; margin-bottom: 10px; }
+.subtitulo { text-align: center; color: #888; margin-bottom: 50px; font-style: italic; }
+.categoria { margin-bottom: 50px; }
+.categoria h3 {
+    font-size: 24px;
+    color: #2C1810;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+.grid-pratos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.prato {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #D4AF37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.prato-info h4 { color: #2C1810; font-size: 18px; margin-bottom: 5px; }
+.prato-info p { font-size: 14px; color: #777; }
+.prato-preco { text-align: right; }
+.prato-preco span {
+    display: block;
+    font-weight: bold;
+    color: #2C1810;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.btn-pedir {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    white-space: nowrap;
+}
+.btn-pedir:hover { background-color: #1ebe5b; }
 
-        <!-- Categoria: Sobremesas -->
-        <div class="categoria">
-            <h3>Sobremesas</h3>
-            <div class="grid-pratos">
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Petit Gateau</h4>
-                        <p>Bolinho quente de chocolate com sorvete de creme.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 32,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Petit%20Gateau" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-                <div class="prato">
-                    <div class="prato-info">
-                        <h4>Pudim de Leite</h4>
-                        <p>Receita tradicional com calda de caramelo.</p>
-                    </div>
-                    <div class="prato-preco">
-                        <span>R$ 18,00</span>
-                        <a href="https://wa.me/5531999999999?text=Quero%20pedir%20Pudim" class="btn-pedir">Pedir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* SOBRE */
+.sobre-restaurante {
+    background-color: #2C1810;
+    color: #f0e6d2;
+    text-align: center;
+    padding: 60px 20px;
+}
+.sobre-restaurante h2 { color: #D4AF37; font-size: 32px; margin-bottom: 20px; }
+.sobre-restaurante p { max-width: 700px; margin: 0 auto; font-size: 17px; line-height: 1.6; }
 
-    <!-- Seção Sobre -->
-    <section class="sobre-restaurante" id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Há mais de 15 anos servindo o melhor da culinária italiana e brasileira em Belo Horizonte. Nosso compromisso é com o sabor e a qualidade.</p>
-    </section>
+/* RODAPÉ */
+footer { background-color: #1a0e08; color: #aaa; padding: 50px 50px 20px 50px; }
+.footer-conteudo { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+.footer-conteudo h3 { color: #D4AF37; margin-bottom: 10px; font-size: 16px; }
+.footer-conteudo p { font-size: 14px; margin-bottom: 5px; }
+.copyright { text-align: center; font-size: 12px; border-top: 1px solid #333; padding-top: 20px; }
 
-    <!-- Rodapé -->
-    <footer id="contato">
-        <div class="footer-conteudo">
-            <div>
-                <h3>Sabor & Arte</h3>
-                <p>Av. Aggeo Pio Sobrinho, 204 - Buritis</p>
-                <p>Belo Horizonte / MG</p>
-            </div>
-            <div>
-                <h3>Horário</h3>
-                <p>Terça a Domingo</p>
-                <p>18h às 23h</p>
-            </div>
-            <div>
-                <h3>Contato</h3>
-                <p>(31) 99999-9999</p>
-                <p>contato@saborarte.com.br</p>
-            </div>
-        </div>
-        <p class="copyright">&copy; 2026 Sabor & Arte. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
+/* ============================
+   RESPONSIVIDADE PARA CELULAR
+   ============================ */
+@media (max-width: 768px) {
+    header { flex-direction: column; padding: 15px 20px; text-align: center; gap: 12px; }
+    .logo { font-size: 24px; }
+    nav { flex-direction: column; width: 100%; gap: 10px; }
+    nav a { font-size: 15px; width: 100%; text-align: center; padding: 5px 0; }
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 15px;
+        margin: 5px auto 0 auto;
+        text-align: center;
+    }
+    .hero-restaurante { padding: 70px 20px; }
+    .hero-texto h1 { font-size: 30px; }
+    .hero-texto p { font-size: 15px; }
+    .btn-principal { padding: 12px 30px; font-size: 15px; }
+    .cardapio { padding: 40px 20px; }
+    .cardapio h2 { font-size: 26px; }
+    .categoria h3 { font-size: 20px; }
+    .grid-pratos { grid-template-columns: 1fr; gap: 15px; }
+    .prato { flex-direction: column; align-items: flex-start; }
+    .prato-preco { width: 100%; text-align: left; margin-top: 10px; }
+    .sobre-restaurante { padding: 40px 20px; }
+    .sobre-restaurante h2 { font-size: 24px; }
+    .sobre-restaurante p { font-size: 15px; }
+    footer { padding: 40px 20px 15px 20px; }
+    .footer-conteudo { flex-direction: column; gap: 20px; }
+}
