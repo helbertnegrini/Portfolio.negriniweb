@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vida Plena - Saúde e Bem-Estar</title>
+    <link rel="stylesheet" href="template-clinica.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Vida <span>Plena</span></div>
+        <nav>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#equipe">Nossa Equipe</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato" class="btn-agendar">Agendar Consulta</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-clinica">
+        <div class="hero-conteudo">
+            <h1>Cuidando da sua saúde com <span>atenção e carinho</span>.</h1>
+            <p>Uma equipe multidisciplinar pronta para atender você e sua família com o que há de mais moderno na medicina.</p>
+            <a href="#contato" class="btn-principal">Agendar Consulta</a>
+            <a href="#especialidades" class="btn-secundario">Ver Especialidades</a>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section class="especialidades" id="especialidades">
+        <h2>Nossas Especialidades</h2>
+        <p class="subtitulo">Cuidado completo para todas as fases da vida.</p>
+
+        <div class="grid-especialidades">
+            <div class="card-especialidade">
+                <div class="icone">🩺</div>
+                <h3>Clínica Geral</h3>
+                <p>Consultas de rotina, check-ups e acompanhamento preventivo.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">❤️</div>
+                <h3>Cardiologia</h3>
+                <p>Exames do coração, eletrocardiograma e acompanhamento cardíaco.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🦷</div>
+                <h3>Odontologia</h3>
+                <p>Limpeza, clareamento, ortodontia e implantes dentários.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🧠</div>
+                <h3>Psicologia</h3>
+                <p>Atendimento psicológico para adultos, crianças e casais.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">👶</div>
+                <h3>Pediatria</h3>
+                <p>Acompanhamento do crescimento e desenvolvimento infantil.</p>
+            </div>
+            <div class="card-especialidade">
+                <div class="icone">🦴</div>
+                <h3>Ortopedia</h3>
+                <p>Tratamento de lesões, dores nas costas e articulações.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Equipe -->
+    <section class="equipe" id="equipe">
+        <h2>Nossa Equipe</h2>
+        <p class="subtitulo">Profissionais qualificados e dedicados ao seu bem-estar.</p>
+
+        <div class="grid-equipe">
+            <div class="membro">
+                <div class="foto">👩‍⚕️</div>
+                <h3>Dra. Ana Silva</h3>
+                <p>Clínica Geral - CRM 12345</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👨‍⚕️</div>
+                <h3>Dr. Carlos Rocha</h3>
+                <p>Cardiologista - CRM 67890</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👩‍⚕️</div>
+                <h3>Dra. Mariana Costa</h3>
+                <p>Pediatra - CRM 11223</p>
+            </div>
+            <div class="membro">
+                <div class="foto">👨‍⚕️</div>
+                <h3>Dr. Paulo Mendes</h3>
+                <p>Ortopedista - CRM 44556</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Clínica -->
+    <section class="sobre-clinica" id="sobre">
+        <div class="sobre-conteudo">
+            <h2>Por que escolher a Vida Plena?</h2>
+            <div class="diferenciais">
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Atendimento Humanizado</h4>
+                        <p>Você é tratado como pessoa, não como número.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Tecnologia de Ponta</h4>
+                        <p>Equipamentos modernos para diagnósticos precisos.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Localização Privilegiada</h4>
+                        <p>Fácil acesso e estacionamento no local.</p>
+                    </div>
+                </div>
+                <div class="diferencial">
+                    <span>✅</span>
+                    <div>
+                        <h4>Convênios Aceitos</h4>
+                        <p>Trabalhamos com os principais planos de saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato / Agendamento -->
+    <section class="contato" id="contato">
+        <h2>Agende sua Consulta</h2>
+        <p class="subtitulo">Preencha o formulário e entraremos em contato para confirmar.</p>
+        <form class="form-contato" onsubmit="event.preventDefault(); alert('✅ Agendamento solicitado! Entraremos em contato para confirmar.');">
+            <input type="text" placeholder="Seu Nome Completo" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <input type="tel" placeholder="Seu Telefone / WhatsApp" required>
+            <select required>
+                <option value="">Selecione a Especialidade</option>
+                <option>Clínica Geral</option>
+                <option>Cardiologia</option>
+                <option>Odontologia</option>
+                <option>Psicologia</option>
+                <option>Pediatria</option>
+                <option>Ortopedia</option>
+            </select>
+            <input type="date" required>
+            <textarea placeholder="Descreva brevemente o motivo da consulta..." rows="4"></textarea>
+            <button type="submit" class="btn-enviar">Solicitar Agendamento</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-conteudo">
+            <div>
+                <h3>Vida Plena</h3>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>Rua da Saúde, 500 - Savassi</p>
+                <p>Belo Horizonte / MG</p>
+            </div>
+            <div>
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 07h às 20h</p>
+                <p>Sábado: 08h às 13h</p>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p>(31) 3333-4444</p>
+                <p>contato@vidaplena.com.br</p>
+            </div>
+            <div>
+                <h3>Emergência</h3>
+                <p>📞 (31) 99999-0000</p>
+                <p>Disponível 24h</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Clínica Vida Plena. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
